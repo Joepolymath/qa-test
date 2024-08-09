@@ -18,7 +18,7 @@ import { MorganMiddleware } from './common/middlewares/morgan.middleware';
     ItemModule,
     DatabaseModule,
     ConfigModule.forRoot({
-      envFilePath: [`.env.stage.${process.env.STAGE}`],
+      envFilePath: [`.env.stage.${process.env.STAGE}`, '.env'],
       validationSchema: configValidationSchema,
     }),
     TypeOrmModule.forRootAsync({
