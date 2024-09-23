@@ -11,3 +11,15 @@ export class CreateItemDto {
   @IsOptional()
   user: User;
 }
+export class UpdateItemDto {
+  @IsOptional()
+  @IsString()
+  name: string;
+
+  @IsOptional()
+  @IsString()
+  description: string;
+
+  @IsOptional()
+  user: User;
+}

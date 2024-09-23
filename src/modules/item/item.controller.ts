@@ -15,7 +15,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { ItemService } from './item.service';
-import { CreateItemDto } from './dto/create-item.dto';
+import { CreateItemDto, UpdateItemDto } from './dto/create-item.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { GetUser } from '../auth/get-user.decorator';
 import { User } from '../user/entities/user.entity';
@@ -33,6 +33,7 @@ import { User } from '../user/entities/user.entity';
   },
   dto: {
     create: CreateItemDto,
+    update: UpdateItemDto,
   },
   query: {
     join: {
